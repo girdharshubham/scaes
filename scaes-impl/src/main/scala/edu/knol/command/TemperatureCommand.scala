@@ -43,9 +43,4 @@ class TemperatureCommand(implicit val client: ElasticClient) {
     .execute(
       search(indexName) query searchDevice
     )
-
-  def deleteES(searchDevice: String) = client
-    .execute(
-      delete(searchDevice) from indexName
-    )
 }
